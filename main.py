@@ -20,6 +20,10 @@ blog--->templates-->blog-->templates.html
 then add 'blog.apps.BlogConfig', in installed apps
 ### use render $#####
 return render(request,'blog/home.html')  #in views
+######## to add context without template ###########################
+add dictionaires in views 
+then add context in views,then in home html for loop contents
+
 go to django model reference,charfield to see models
 py manage.py makemigrations # to make migrations
 'blog.apps.BlogConfig',  add to settings installed apps then do migrations command
