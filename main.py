@@ -1,5 +1,5 @@
 # This is a sample Python script.
-
+#https://github.com/CoreyMSchafer/code_snippets/tree/master/Django_Blog to see coreyschafer guthub
 ''' pip install django
 pip install django == 2.1.5 # to install a particular version
 python -m django --version #to check django version
