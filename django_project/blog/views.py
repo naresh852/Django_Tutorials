@@ -22,7 +22,9 @@ def home(request):
         'posts':posts
     }
     return render(request,'blog/home.html',context)
+# def about(request):
+#     return render(request,'blog/about.html')
 def about(request):
-    return render(request,'blog/about.html')
+    return render(request,'blog/about.html',{'title':'About'})
 # def about(request):
     # return HttpResponse('<h1> Blog About</h1>')
