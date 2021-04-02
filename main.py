@@ -24,6 +24,12 @@ return render(request,'blog/home.html')  #in views
 add dictionaires in views 
 then add context in views,then in home html for loop contents
 
+############tut 3 ADMIN PAGES ################
+py manage.py createsuperuser  #THROWS ERROR no such table: auth_user BECAUSE WE HAVENT CREATED DB YET
+py manage.py makemigrations  #we havent added db yet
+py manage.py migrate  ##now we can use admin page
+py manage.py createsuperuser  #add user passwd email    
+
 go to django model reference,charfield to see models
 py manage.py makemigrations # to make migrations
 'blog.apps.BlogConfig',  add to settings installed apps then do migrations command
