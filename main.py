@@ -140,6 +140,12 @@ Out[20]: <Post: Blog 3>
 In [21]: Post.objects.all()
 Out[21]: <QuerySet [<Post: Blog_1>, <Post: Blog 2>, <Post: Blog 3>]>
 
+####      user registration ######
+post request # to get user data
+get request #simply display a page
+crispy forms allow us to style our form
+pip install django-crispy-forms
+
 go to django model reference,charfield to see models
 py manage.py makemigrations # to make migrations
 'blog.apps.BlogConfig',  add to settings installed apps then do migrations command
