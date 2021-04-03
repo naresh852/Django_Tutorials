@@ -146,6 +146,40 @@ get request #simply display a page
 crispy forms allow us to style our form
 pip install django-crispy-forms
 
+################ userprofile and picture ##############
+from django.contrib.auth.models import User
+
+In [1]: from django.contrib.auth.models import User
+
+In [2]: user =User.objects.filter(username='naresh').first()    
+
+In [3]: user
+Out[3]: <User: naresh>
+       
+
+In [5]: user.profile
+Out[5]: <Profile: naresh Profile>
+
+In [6]: user.profile.image
+Out[6]: <ImageFieldFile: profile_pics/WIN_20200807_11_31_58_Pro.jpg>
+
+In [7]: user.profile.image.width
+Out[7]: 1280
+
+In [8]: user.profile.image.url
+Out[8]: '/profile_pics/WIN_20200807_11_31_58_Pro.jpg'
+
+In [9]: user =User.objects.filter(username='newuser3').first()  
+
+In [10]: user
+Out[10]: <User: newuser3>
+
+In [11]: user.profile.image
+
+### to see django static files doc
+https://docs.djangoproject.com/en/2.1/howto/static-files/#serving-files-uploaded-by-a-user-during-development
+
+
 go to django model reference,charfield to see models
 py manage.py makemigrations # to make migrations
 'blog.apps.BlogConfig',  add to settings installed apps then do migrations command
