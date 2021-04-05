@@ -179,6 +179,61 @@ In [11]: user.profile.image
 ### to see django static files doc
 https://docs.djangoproject.com/en/2.1/howto/static-files/#serving-files-uploaded-by-a-user-during-development
 
+####### pagination adding posts with json ##########################
+
+In [1]: import json
+
+In [2]: from blog.models import Post
+
+In [3]: with open('posts.json') as f:
+   ...: 
+
+In [4]: for post in posts_json:
+   ...:     post = Post(title=post['title'], content=post['content'], author_id=post['user_id'])
+   ...:     post.save()
+   ...: 
+
+In [5]: exit
+##############using paginator  ##############
+ from django.core.paginator import Paginator
+
+In [2]: posts = ['1','2','3','4','5']
+
+In [3]: p =Paginator(posts, 2)
+
+In [4]: p.num_pages
+Out[4]: 3
+
+In [5]: for page in p.page_range:
+   ...:     print(page)
+   ...: 
+1
+2
+3
+
+
+In [6]: p1= p.page(1)
+
+In [7]: 
+
+In [7]: p1
+Out[7]: <Page 1 of 3>
+
+In [8]: p1.number
+Out[8]: 1
+
+In [9]: p1.object_list
+Out[9]: ['1', '2']
+
+In [10]: p1.has_previous()
+Out[10]: False
+
+In [11]: p1.has_next()
+Out[11]: True
+
+In [13]: p1.next_page_number()
+Out[13]: 2
+http://127.0.0.1:8000/?page=14  ## to check posts on server
 
 go to django model reference,charfield to see models
 py manage.py makemigrations # to make migrations
