@@ -235,6 +235,10 @@ In [13]: p1.next_page_number()
 Out[13]: 2
 http://127.0.0.1:8000/?page=14  ## to check posts on server
 
+
+############ EMAIL AND PASSWORD RESET ###################
+http://127.0.0.1:8000/password-reset/ ##to reset password
+
 go to django model reference,charfield to see models
 py manage.py makemigrations # to make migrations
 'blog.apps.BlogConfig',  add to settings installed apps then do migrations command
